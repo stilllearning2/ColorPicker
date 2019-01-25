@@ -62,17 +62,16 @@
 			hex = hex + addhexvalue(parseInt(blue.value / 16));
 			hex = hex + addhexvalue(blue.value % 16);
 			
-			console.log(hex);
 			document.getElementById("colordiv").style.backgroundColor=hex;
-			document.getElementById("hexvalue").innerHTML="Hex Value: " +hex;
+			document.getElementById("hexvalue").innerHTML="Hex Value: "+hex;
 		}
 		
 		function clear(){
 			document.getElementById("red").value="0";
 			document.getElementById("green").value="0";
 			document.getElementById("blue").value="0";
-			document.getElementById("colordiv").style.backgroundColor="transparent";
 			document.getElementById("hexvalue").innerHTML="Hex Value: ";
+			document.getElementById("colordiv").style.backgroundColor="transparent";
 		}
 		
 		function addhexvalue(number){	
