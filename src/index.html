@@ -19,32 +19,39 @@
 			//validate color values
 			// red
 			var color=document.getElementById("red").value;
-			if (color < 0 || color > 255){
+			if (parseInt(color)==NaN) {
+				alert("Red must be a number, between 0 and 255");
+				red.value = 0;
+				return;
+			} else if (color < 0 || color > 255){
 				alert("Red must be between 0 and 255");
 				red.value = 0;
 				return;
 			}
-			console.log(red.value);
-			
-			
+					
 			// green
 			var color=document.getElementById("green").value;
-			if (color < 0 || color > 255){
+			if (parseInt(color)==NaN) {
+				alert("Green must be a number, between 0 and 255");
+				red.value = 0;
+				return;
+			} else if (color < 0 || color > 255){
 				alert("Green must be between 0 and 255");
 				green.value = 0;
 				return;
 			}
-			console.log(green.value);
-			
 			
 			// blue
 			var color=document.getElementById("blue").value;
-			if (color < 0 || color > 255){
+			if (parseInt(color)==NaN) {
+				alert("Blue must be a number, between 0 and 255");
+				red.value = 0;
+				return;
+			} else if (color < 0 || color > 255){
 				alert("Blue must be between 0 and 255");
 				blue.value = 0;
 				return;
 			}
-			console.log(blue.value);
 			
 			// create hex value
 			var hex = "#";
