@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Color Picker</title>
+
+    <link href="style.css" type="text/css" rel="stylesheet" />
+	<script>
+		// add window eventListener for Load
+        window.addEventListener("load",init);
+		const hex = "#"
+		
+		function init(){
+			document.getElementById("show").addEventListener("click", show);
+			document.getElementById("clear").addEventListener("click", clear);
+		}
+		
+		function show(){
+			//validate color values
+			// red
+			var color=document.getElementById("red").value;
+			if (color < 0 || color > 255){
+				alert("Red must be between 0 and 255");
+				red.value = 0;
+				return;
+			}
+			console.log(red.value);
+			
+			
+			// green
+			var color=document.getElementById("green").value;
+			if (color < 0 || color > 255){
+				alert("Green must be between 0 and 255");
+				green.value = 0;
+				return;
+			}
+			console.log(green.value);
+			
+			
+			// blue
+			var color=document.getElementById("blue").value;
+			if (color < 0 || color > 255){
+				alert("Blue must be between 0 and 255");
+				blue.value = 0;
+				return;
+			}
+			console.log(blue.value);
+			
+			// create hex value
+			var hex = "#";
+			hex = hex + addhexvalue(parseInt(red.value / 16));
+			hex = hex + addhexvalue(red.value % 16);
+			hex = hex + addhexvalue(parseInt(green.value / 16));
+			hex = hex + addhexvalue(green.value % 16);
+			hex = hex + addhexvalue(parseInt(blue.value / 16));
+			hex = hex + addhexvalue(blue.value % 16);
+			
+			console.log(hex);
+			document.getElementById("colordiv").style.backgroundColor=hex;
+			document.getElementById("hexvalue").innerHTML="Hex Value: " +hex;
+		}
+		
+		function clear(){
+			document.getElementById("red").value="0";
+			document.getElementById("green").value="0";
+			document.getElementById("blue").value="0";
+			document.getElementById("colordiv").style.backgroundColor="transparent";
+		}
+		
+		function addhexvalue(number){	
+			var string
+			if(number <=9){
+				string =number.toString();
+			} else {
+				switch(number){
+					case(10):
+						string ="a"
+						break;
+					case(11):
+						string="b"
+						break;
+					case(12):
+						string="c"
+						break;
+					case(13):
+						string="d"
+						break;
+					case(14):
+						string="e"
+						break;
+					case(15):
+						string="f"
+						break;
+				}
+			}	
+			return string;
+		}
+	
+	</script>
+</head>
+
+<body>
+	<div id="wrapper" >
+		<p id="title">CSS Color Display</p>
+		<p id="instructions">Select a number from 0 to 255 for each color value.</p>
+		<div id="boxwrapper">
+			<div class="numberdiv">
+				<label for="red">Red:</label><br />
+				<input type="text" class="input" id="red" size="8">
+			</div>
+			<div class="numberdiv">
+				<label for="green">Green:</label><br />
+				<input type="text" class="input" id="green" size="8">
+			</div>
+			<div class="numberdiv">
+				<label for="blue">Blue:</label><br />
+				<input type="text" class="input" id="blue" size="8">
+			</div>
+			<div id="buttons">
+				<button id="show" value="show">Show me the color!</button>
+				<button id="clear" value="clear">Clear all</button>
+			</div>
+		</div>
+		<div id="colordiv"></div>
+		
+		<p id="hexvalue">Hex Value: </p>
+		
+	</div> 
+</body>
+</html>
