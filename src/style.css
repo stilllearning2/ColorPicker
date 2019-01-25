@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-size: 18px;
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	padding: 40px; 
+	background-color: #c0d8f7;
+}
+
+#wrapper {
+	margin: 30px auto;
+	width: 480px;
+	height: 325px;
+	background-color: #f7f1c0;
+	padding: 20px 40px; 
+	
+}
+
+#title{
+	font-weight: bold;
+	font-size: 125%;
+}
+
+#instructions{
+	font-size: 110%;
+}
+
+#boxwrapper{
+	width: 400;
+	height: 100;
+}
+
+.numberdiv{
+	float: left;
+	height: 60px;
+	width: 80px;
+	border: .5px solid #898989 ;
+	padding: 10px;
+	margin-right: 15px;
+}
+
+.input{
+	width: 70px;
+	text-align: right;
+	background-color: white;
+}
+
+button{
+	height: 30px;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+
+#colordiv{
+	clear: left;
+	background-color: transparent;
+	width: 475px;
+	height: 70px;
+	margin-top: 30px;
+	border: 1px solid #898989;
+}
+
+#hexvalue{
+	margin-top: 10px;
+}
