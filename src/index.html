@@ -4,11 +4,11 @@
 	<meta charset="utf-8">
 	<title>Color Picker</title>
 
-    <link href="style.css" rel="stylesheet" />
+    	<link href="style.css" rel="stylesheet" />
+	
 	<script>
 		// add window eventListener for Load
         window.addEventListener("load",init);
-		const hex = "#"
 		
 		function init(){
 			document.getElementById("show").addEventListener("click", show);
@@ -18,7 +18,7 @@
 		function show(){
 			//validate color values
 			// red
-			var color=document.getElementById("red").value;
+			let color=document.getElementById("red").value;
 			if (isNaN(parseInt(color))) {
 				alert("Red must be a number (between 0 and 255)!");
 				red.value = 0;
@@ -30,7 +30,7 @@
 			}
 					
 			// green
-			var color=document.getElementById("green").value;
+			color=document.getElementById("green").value;
 			if (isNaN(parseInt(color))) {
 				alert("Green must be a number (between 0 and 255)!");
 				green.value = 0;
@@ -42,7 +42,7 @@
 			}
 			
 			// blue
-			var color=document.getElementById("blue").value;
+			color=document.getElementById("blue").value;
 			if (isNaN(parseInt(color))) {
 				alert("Blue must be a number (between 0 and 255)!");
 				blue.value = 0;
@@ -54,7 +54,7 @@
 			}
 			
 			// create hex value
-			var hex = "#";
+			let hex = "#";
 			hex = hex + addhexvalue(parseInt(red.value / 16));
 			hex = hex + addhexvalue(red.value % 16);
 			hex = hex + addhexvalue(parseInt(green.value / 16));
@@ -75,7 +75,7 @@
 		}
 		
 		function addhexvalue(number){	
-			var string
+			let string = "";
 			if(number <=9){
 				string =number.toString();
 			} else {
