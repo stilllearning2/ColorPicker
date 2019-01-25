@@ -19,8 +19,8 @@
 			//validate color values
 			// red
 			var color=document.getElementById("red").value;
-			if (parseInt(color)==NaN) {
-				alert("Red must be a number, between 0 and 255");
+			if (isNaN(parseInt(color))) {
+				alert("Red must be a number (between 0 and 255)!");
 				red.value = 0;
 				return;
 			} else if (color < 0 || color > 255){
@@ -31,8 +31,8 @@
 					
 			// green
 			var color=document.getElementById("green").value;
-			if (parseInt(color)==NaN) {
-				alert("Green must be a number, between 0 and 255");
+			if (isNaN(parseInt(color))) {
+				alert("Green must be a number (between 0 and 255)!");
 				red.value = 0;
 				return;
 			} else if (color < 0 || color > 255){
@@ -43,8 +43,8 @@
 			
 			// blue
 			var color=document.getElementById("blue").value;
-			if (parseInt(color)==NaN) {
-				alert("Blue must be a number, between 0 and 255");
+			if (isNaN(parseInt(color))) {
+				alert("Blue must be a number (between 0 and 255)!");
 				red.value = 0;
 				return;
 			} else if (color < 0 || color > 255){
